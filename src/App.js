@@ -4,15 +4,15 @@ import { Route, Routes } from 'react-router-dom'
 
 import Header from "./components/Header";
 import ProductList from './components/ProductList';
-import Form from './components/Form';
+import Form from "./components/Form";
 
 import './App.css';
 
 function App() {
-  const { tg } = useTelegram()
+  const { tg } = useTelegram();
 
   useEffect(() => {
-    tg.ready()
+    tg.ready();
   }, [tg])
 
   return (
@@ -20,10 +20,9 @@ function App() {
       <Header />
       <Routes>
         <Route index element={<ProductList />} />
-        <Route path='form' element={<Form />} />
+        <Route path={'form'} element={<Form />} />
       </Routes>
     </div>
-
   );
 }
 
