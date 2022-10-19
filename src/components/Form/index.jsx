@@ -12,25 +12,17 @@ const Form = () => {
     const data = {
       country,
       street,
-      subject,
+      subject
     }
-
-    tg.sendData(JSON.stringify(data))
-  }, [country, street, subject, tg])
+    tg.sendData(JSON.stringify(data));
+  }, [country, street, subject])
 
   useEffect(() => {
-    tg.WebApp.onEvent('mainButtonClicked', onSendData)
-
+    tg.onEvent('mainButtonClicked', onSendData)
     return () => {
-      tg.WebApp.offEvent('mainButtonClicked', onSendData)
+      tg.offEvent('mainButtonClicked', onSendData)
     }
-  }, [onSendData, tg.WebApp])
-
-  useEffect(() => {
-    tg.MainButton.setParams({
-      text: 'Отправить данные'
-    })
-  }, [tg])
+  }, [onSendData])
 
   useEffect(() => {
     if (!street || !country) {
