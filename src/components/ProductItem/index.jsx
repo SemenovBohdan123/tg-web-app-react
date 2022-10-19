@@ -4,7 +4,7 @@ import Button from "../Button";
 
 import "./styles.css";
 
-const ProductItem = ({ product, className, onAdd }) => {
+const ProductItem = ({ product, className, onAdd, selecetData }) => {
 
   const onAddHeandler = () => {
     onAdd(product)
@@ -19,7 +19,7 @@ const ProductItem = ({ product, className, onAdd }) => {
         <span>Стоимость: <b>{product.price}</b></span>
       </div>
       <Button className='add-btt' onClick={() => onAddHeandler()}>
-        Добавить в корзину
+        {selecetData.find(item => item.id === product.id) ? 'Удалить' : 'Добавить в корзину'}
       </Button>
     </div>
   );
