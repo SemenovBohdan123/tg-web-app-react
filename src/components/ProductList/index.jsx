@@ -1,4 +1,4 @@
-import { setState } from 'react';
+import { useState } from 'react';
 
 import Product from "../ProductItem";
 
@@ -58,7 +58,7 @@ const getTotalPrice = (items) => {
 }
 
 const ProductList = () => {
-  const [addedItems, setAddedItems] = setState([])
+  const [addedItems, setAddedItems] = useState([])
   const { tg } = useTelegram()
 
   const onAdd = (product) => {
@@ -86,7 +86,7 @@ const ProductList = () => {
   return (
     <div className='list'>
       {products.map(item => (
-        <Product product={item} onAdd={onAdd} className='item' />
+        <Product product={item} onAdd={onAdd} />
       ))}
     </div>
   );
