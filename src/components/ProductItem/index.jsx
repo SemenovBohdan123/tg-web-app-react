@@ -13,9 +13,9 @@ const ProductItem = ({ product, className, onAdd }) => {
   return (
     <div className={'product' + className}>
       <div className='img' />
-      <div className='title'>{product.title}</div>
-      <div className='descpition'></div>
-      <div className='price'>
+      <div>{product.title}</div>
+      <div className='description'>{product.description}</div>
+      <div>
         <span>Стоимость: <b>{product.price}</b></span>
       </div>
       <Button className='add-btt' onClick={onAddHeandler}>
