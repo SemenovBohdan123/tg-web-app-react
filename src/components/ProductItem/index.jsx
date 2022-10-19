@@ -19,7 +19,7 @@ const ProductItem = ({ product, className, onAdd, selecetData }) => {
         <span>Стоимость: <b>{product.price}</b></span>
       </div>
       <Button className='add-btt' onClick={() => onAddHeandler()}>
-        {selecetData.find(item => item.id === product.id) ? 'Удалить' : 'Добавить в корзину'}
+        {selecetData.find(item => item.id === product.id) ? 'Удалить из корзины' : 'Добавить в корзину'}
       </Button>
     </div>
   );
