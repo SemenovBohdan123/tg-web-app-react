@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useCallback, useEffect, useState } from 'react';
 import './styles.css';
 import { useTelegram } from "../../hooks/useTelegram";
