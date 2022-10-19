@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useCallback, useEffect, useState } from 'react';
 import './styles.css';
 import { useTelegram } from "../../hooks/useTelegram";
@@ -17,7 +16,7 @@ const Form = () => {
     }
 
     tg.sendData(JSON.stringify(data))
-  }, [])
+  }, [country, street, subject, tg])
 
   useEffect(() => {
     tg.WebApp.onEvent('mainButtonClicked', onSendData)
@@ -25,7 +24,7 @@ const Form = () => {
     return () => {
       tg.WebApp.offEvent('mainButtonClicked', onSendData)
     }
-  }, [])
+  }, [onSendData, tg.WebApp])
 
   useEffect(() => {
     tg.MainButton.setParams({
