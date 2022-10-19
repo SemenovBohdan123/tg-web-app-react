@@ -43,18 +43,14 @@ const products = [
     price: 222,
     description: 'Blue color'
   },
-  {
-    id: '7',
-    title: 'Джинсы6',
-    price: 111,
-    description: 'Orange color',
-  },
 ]
 
 const getTotalPrice = (items) => {
-  items.reduce((acc, item) => {
+  const sum = items.reduce((acc, item) => {
     return acc += item.price
   }, 0)
+
+  return sum
 }
 
 const ProductList = () => {
