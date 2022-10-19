@@ -8,45 +8,45 @@ import './styles.css'
 
 const products = [
   {
-    id: 1,
+    id: '1',
     title: 'Джинсы0',
-    price: 5000,
+    price: 777,
     description: 'Red color'
   },
   {
-    id: 2,
+    id: '2',
     title: 'Джинсы1',
-    price: 5000,
+    price: 666,
     description: 'Green color'
   },
   {
-    id: 3,
+    id: '3',
     title: 'Джинсы2',
-    price: 5000,
+    price: 555,
     description: 'Grey color'
   },
   {
-    id: 4,
+    id: '4',
     title: 'Джинсы3',
-    price: 5000,
+    price: 444,
     description: 'Black color'
   },
   {
-    id: 5,
+    id: '5',
     title: 'Джинсы4',
-    price: 5000,
+    price: 333,
     description: 'Yellow color'
   },
   {
-    id: 6,
+    id: '6',
     title: 'Джинсы5',
-    price: 5000,
+    price: 222,
     description: 'Blue color'
   },
   {
-    id: 7,
+    id: '7',
     title: 'Джинсы6',
-    price: 5000,
+    price: 111,
     description: 'Orange color',
   },
 ]
